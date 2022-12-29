@@ -1,0 +1,39 @@
+$Dark: #202631;
+$EbonyClay: #2E2C38;
+$White: #ffffff;
+$GhostWhite: #F7F9FC;
+$LavenderMist: #E4E9F2;
+$CadetGrey: #8F9BB3;
+$Chambray: #2E4B9C;
+$SmokeyGrey: #707070;
+$JordyBlue: #7FBCF3;
+$MarbleBlue: #596A88;
+$LightGrey: #DADADA;
+$SoftPeach: #F1EFEF;
+
+$pages: $Dark,
+$EbonyClay,
+$White,
+$GhostWhite,
+$LavenderMist,
+$CadetGrey,
+$Chambray,
+$SmokeyGrey,
+$JordyBlue,
+$MarbleBlue,
+$LightGrey;
+
+
+@each $item in $pages {
+    .text-color-#{ index($pages, $item)} {
+        color: $item;
+    }
+}
+@each $item in $pages {
+    .bg-color-#{ index($pages, $item)} {
+        background: $item;
+    }
+}
+.hideAction{
+    display: none;
+}

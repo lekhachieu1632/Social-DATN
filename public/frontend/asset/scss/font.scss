@@ -1,0 +1,52 @@
+@for $i from 10 through 50 {
+    .fs-#{$i} {
+        font-size: $i*1px ;
+    }
+}
+@for $i from 1 through 100 {
+    .lh-#{$i} {
+        line-height:$i*1px ;
+    }
+}
+
+@for $i from 1 through 100 {
+    .w-#{$i} {
+        width:$i*1% ;
+    }
+}
+@for $i from 1 through 100 {
+    .maxw-#{$i} {
+        max-width:$i*1% ;
+    }
+}
+// end css font-size
+
+// responsive font-size
+@media (max-width: 1280px) {
+    @for $i from 10 through 50 {
+        .fs-#{$i} {
+            font-size: calc($i*1px - 3px) ;
+        }
+    }
+}
+
+// responsive font-size
+
+// css font weight
+@for $i from 1 through 8 {
+    .fw-#{$i*100} {
+        font-weight: $i*100 ;
+    }
+}
+@mixin webkit-box($value: 2) {
+    -webkit-line-clamp: $value;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+  }
+  .webkit-box-1 {
+    @include webkit-box($value: 1);
+  }
+  .webkit-box-2 {
+    @include webkit-box($value: 2);
+  }
